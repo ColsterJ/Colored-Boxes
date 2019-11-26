@@ -6,13 +6,12 @@ class Square extends React.Component {
         super(props); 
         
         this.state = {
-          backgroundColor: 0xFFC0CB, 
+          backgroundColor: "pink", 
         };
     
         // Only changeColor needs to be bound (not randomColor), because that's what is used in the in render()
         this.changeColor = this.changeColor.bind(this);
       }
-    
     
       randomColor() {
         return '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
